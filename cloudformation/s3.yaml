@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Create 2 private S3 buckets
+
+Resources:
+  PrivateBucket1:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub 'cf-private-bucket-1-${AWS::AccountId}'
+      AccessControl: Private
+      VersioningConfiguration:
+        Status: Enabled
+
+  PrivateBucket2:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub 'cf-private-bucket-2-${AWS::AccountId}'
+      AccessControl: Private
+      VersioningConfiguration:
+        Status: Enabled
