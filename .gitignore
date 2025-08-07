@@ -29,3 +29,7 @@ Thumbs.db
 __pycache__/
 *.pyc
 .env
+
+# MS Word temporary files
+~$*.docx
+*.tmp
