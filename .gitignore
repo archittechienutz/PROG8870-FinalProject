@@ -1,25 +1,31 @@
-# Terraform state
+# ─── Terraform State Files ───────────────────────────────────────────
 *.tfstate
 *.tfstate.backup
-.terraform/
-.terraform.lock.hcl
 crash.log
 
-# Sensitive variable files
+# Ignore Terraform configuration directory
+.terraform/
+
+# ─── Terraform Variable Files (Sensitive) ────────────────────────────
 terraform.tfvars
+terraform.tfvars.backup
 *.tfvars
 
-# IDE/Editor-specific files
+# ─── Lock File (OPTIONAL - keep tracked) ─────────────────────────────
+# If you want to track .terraform.lock.hcl, comment out the next line
+#.terraform.lock.hcl
+
+# ─── Editor / IDE Files ──────────────────────────────────────────────
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# OS-specific files
+# ─── OS-Specific Files ───────────────────────────────────────────────
 .DS_Store
 Thumbs.db
 
-# Python or Shell environments (if used)
+# ─── Python or Shell environments ────────────────────────────────────
 __pycache__/
 *.pyc
 .env
